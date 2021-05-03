@@ -10,7 +10,7 @@ body .banner-margin {
 }
 
 body .banner-margin #create-plan-banner {
-  background: url("/public/assets/plan/mobile/image-hero-blackcup.jpg") no-repeat;
+  background: url("../assets/plan/mobile/image-hero-blackcup.jpg") no-repeat;
   background-size: cover;
   width: 100%;
   color: white;
@@ -291,7 +291,7 @@ body #order-summary-modal #modal-content footer {
 
 @media only screen and (min-width: 425px) {
   body .banner-margin #create-plan-banner {
-    background: url("/public/assets/plan/tablet/image-hero-blackcup.jpg") no-repeat;
+    background: url("../assets/plan/tablet/image-hero-blackcup.jpg") no-repeat;
     background-size: cover;
     width: 100%;
     padding: 75px 35px;

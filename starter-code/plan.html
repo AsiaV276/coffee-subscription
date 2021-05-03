@@ -1,0 +1,201 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./scss/plan.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <title>Frontend Mentor | Coffeeroasters subscription site</title>
+</head>
+
+<body>
+  Home
+  About us
+  Create your plan
+
+  <main>
+    <div class="banner-margin">
+      <section id="create-plan-banner">
+        <h1>Create a plan</h1>
+        <p>
+          Build a subscription plan that best fits your needs. We offer an assortment of the <br> best <br>
+          artisan coffees from around the globe delivered fresh to your door.
+        </p>
+      </section>
+    </div>
+
+    <section id="plan-description">
+      
+      <div>
+        <div class="number">01</div>
+        <h3>Pick your coffee</h3>
+        <p>Select from our evolving range of artisan coffees. Our beans are ethically
+        sourced and we pay fair prices for them. There's new coffees in all profiles
+        every month for you to try out.
+        </p>
+      </div>
+      <div>
+        <div class="number">02</div>
+        <h3>Choose the frequency</h3>
+        <p>Customize your order frequency, quantity, even your roast style and grind type.
+          Pause, skip or cancel your subscription with no commitment through our online portal.        
+        </p>
+      </div>
+      <div>
+        <div class="number">03</div>
+        <h3>Receive and enjoy!</h3>
+        <p>We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
+          world-class coffees curated to provide a distinct tasting experience.
+        </p>
+      </div>
+    </section>
+
+    <section id="plan">
+      <div id="drink" class="selection-boxes">
+        <div class="toggle" onclick="toggle(this)"><h4>How do you drink your coffee?</h4><img class="arrow" src="./assets/plan/desktop/icon-arrow.svg" alt=""></div>
+        <div class="options">
+          <div id="capsule" class="item-box" onclick="drinkSelection(this.id)">
+            <h3>Capsule</h3>
+            <p>Compatible with Nespresso systems and similar brewers</p>  
+          </div>
+          <div id="filterDrink" class="item-box" onclick="drinkSelection(this.id)">
+            <h3>Filter</h3>
+            <p>For pour over or drip methods like Aeropress, Chemex, and V60</p>
+          </div>
+          <div id="espresso" class="item-box" onclick="drinkSelection(this.id)">
+            <h3>Espresso</h3>
+            <p>Dense and finely ground beans for an intense, flavorful experience</p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="type" class="selection-boxes">
+        <div class="toggle" onclick="toggle(this)"><h4>What type of coffee?</h4><img class="arrow" src="./assets/plan/desktop/icon-arrow.svg" alt=""></div>
+        <div class="options">
+          <div id="single" class="item-box" onclick="typeSelection(this.id)">
+            <h3>Single origin</h3>
+            <p>Distinct, high quality coffee from a specific family-owned farm</p>  
+          </div>
+          <div id="decaf" class="item-box" onclick="typeSelection(this.id)">
+            <h3>Decaf</h3>
+            <p>Just like regular coffee, except the caffeine has been removed</p>  
+          </div>
+          <div id="blended" class="item-box" onclick="typeSelection(this.id)">
+            <h3>Blended</h3>
+            <p>Combination of two or three dark roasted beans of organic coffees</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="amount" class="selection-boxes">
+        <div class="toggle" onclick="toggle(this)"><h4>How much would you like?</h4><img class="arrow" src="./assets/plan/desktop/icon-arrow.svg" alt=""></div>
+        <div class="options">
+          <div id="250g" class="item-box" onclick="amountSelection(this.id)">
+            <h3>250g</h3>
+            <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
+          </div>
+          <div id="500g" class="item-box" onclick="amountSelection(this.id)">
+            <h3>500g</h3>
+            <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
+          </div>
+          <div id="1000g" class="item-box" onclick="amountSelection(this.id)">
+            <h3>1000g</h3>
+            <p>Perfect for offices and events. Yields about 90 delightful cups.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="grind" class="selection-boxes">
+        <div class="toggle" onclick="toggle(this)"><h4>Want us to grind them?</h4><img class="arrow" src="./assets/plan/desktop/icon-arrow.svg" alt=""></div>
+        <div class="options">
+          <div id="wholebean" class="item-box" onclick="grindSelection(this.id)">
+            <h3>Wholebean</h3>
+            <p>Best choice if you cherish the full sensory experience</p>
+          </div>
+          <div id="filterGrind" class="item-box" onclick="grindSelection(this.id)">
+            <h3>Filter</h3>
+            <p>For drip or pour-over coffee methods such as V60 or Aeropress</p>
+          </div>
+          <div id="cafetiere" class="item-box" onclick="grindSelection(this.id)">
+            <h3>Cafetiére</h3>
+            <p>Course ground beans specially suited for french press coffee</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="delivery" class="selection-boxes">
+        <div class="toggle" onclick="toggle(this)"><h4>How often should we deliver?</h4><img class="arrow" src="./assets/plan/desktop/icon-arrow.svg" alt=""></div>
+        <div class="options">
+          <div id="weekly" class="item-box" onclick="deliverySelection(this.id)">
+            <h3>Every week</h3>
+            <p>$<span id="weekly-span">_____</span> per shipment. Includes free first-class shipping.</p>
+          </div>
+          <div id="biweekly" class="item-box" onclick="deliverySelection(this.id)">
+            <h3>Every 2 weeks</h3>
+            <p>$<span id="biweekly-span">_____</span> per shipment. Includes free priority shipping.</p>
+          </div>
+          <div id="monthly" class="item-box" onclick="deliverySelection(this.id)">
+            <h3>Every month</h3>
+            <p>$<span id="monthly-span">_____</span> per shipment. Includes free priority shipping.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="order-summary">
+      <h4>Order Summary</h4>
+      <p>“I drink coffee <span id="pv"></span> <span id="drink-span">_____</span>, with a <span id="type-span">_____</span>
+         type of bean. <span id="amount-span">_____</span> ground ala <span id="grind-span">_____</span>, 
+      sent to me <span id="delivery-span">_____</span>.”</p>
+    </section>
+
+    <button onclick="openModal()">Create my plan!</button>
+  </main>
+
+  
+  
+  
+  01 Preferences
+  02 Bean type
+  03 Quantity
+  04 Grind option
+  05 Deliveries
+  
+
+  
+
+  <!-- Modal -->
+  <section id="order-summary-modal">
+    <div id="modal-content">
+      <h4>Order Summary</h4>
+      <p>“I drink coffee <span id="pv2"></span> <span id="drink-span2">_____</span>, with a <span id="type-span2">_____</span>
+         type of bean. <span id="amount-span2">_____</span> ground ala <span id="grind-span2">_____</span>, 
+      sent to me <span id="delivery-span2">_____</span>.”</p>
+  
+      <p>Is this correct? You can proceed to checkout or go back to plan selection if something 
+      is off. Subscription discount codes can also be redeemed at the checkout.
+      </p>
+      <button>
+        Checkout - $<span id="total">_____</span> /month
+      </button>
+      <footer>
+        <p>$<span id="total2">_____</span> /month</p>
+        <button id="btn2">
+          Checkout
+        </button>
+      </footer>
+    </div>
+  </section>
+  <!-- End modal -->
+
+  Home
+  About us
+  Create your plan
+</body>
+<script src="plan.js"></script>
+
+</html>

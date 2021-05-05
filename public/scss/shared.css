@@ -1,0 +1,72 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+
+header #logo {
+  height: 15px;
+  width: auto;
+}
+
+header .menu-icon {
+  display: block;
+}
+
+header nav {
+  display: none;
+  text-transform: uppercase;
+}
+
+header nav a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  header #logo {
+    height: 20px;
+    width: auto;
+  }
+  header .menu-icon {
+    display: none;
+  }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 20px;
+  }
+  header #logo {
+    height: 35px;
+    width: auto;
+  }
+}
+/*# sourceMappingURL=shared.css.map */

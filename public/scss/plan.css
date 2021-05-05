@@ -155,6 +155,21 @@ body #plan .selection-boxes .options .item-box-active:hover {
   color: white;
 }
 
+body #plan #type .toggle .arrow,
+body #plan #amount .toggle .arrow,
+body #plan #grind .toggle .arrow,
+body #plan #delivery .toggle .arrow {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+body #plan #type .options,
+body #plan #amount .options,
+body #plan #grind .options,
+body #plan #delivery .options {
+  display: none;
+}
+
 body #plan .disabled .toggle {
   cursor: not-allowed;
 }
@@ -289,22 +304,35 @@ body #order-summary-modal #modal-content footer {
   display: none;
 }
 
-@media only screen and (min-width: 425px) {
+@media only screen and (min-width: 768px) {
   body .banner-margin #create-plan-banner {
     background: url("../assets/plan/tablet/image-hero-blackcup.jpg") no-repeat;
     background-size: cover;
     width: 100%;
-    padding: 75px 35px;
+    height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 35px;
     text-align: left;
   }
   body .banner-margin #create-plan-banner br {
     display: none;
   }
   body .banner-margin #create-plan-banner h1 {
-    font-size: 35px;
+    font-size: 40px;
   }
   body .banner-margin #create-plan-banner p {
+    font-size: 15px;
     width: 65%;
+    line-height: 35px;
   }
   body #plan-description {
     background: url("../assets/plan/tablet/bg-steps.png") no-repeat;
@@ -334,6 +362,9 @@ body #order-summary-modal #modal-content footer {
   body #plan .selection-boxes .options .item-box {
     height: 100%;
   }
+  body #order-summary p {
+    font-size: 22px;
+  }
   body #order-summary-modal #modal-content p {
     padding-left: 40px;
     padding-right: 40px;
@@ -355,7 +386,36 @@ body #order-summary-modal #modal-content footer {
   }
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 1200px) {
+  body .banner-margin #create-plan-banner {
+    background: url("../assets/plan/desktop/image-hero-blackcup.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 35px;
+    text-align: left;
+  }
+  body .banner-margin #create-plan-banner br {
+    display: none;
+  }
+  body .banner-margin #create-plan-banner h1 {
+    font-size: 40px;
+  }
+  body .banner-margin #create-plan-banner p {
+    font-size: 15px;
+    width: 65%;
+    line-height: 35px;
+  }
   body #plan-description {
     background: url("../assets/plan/desktop/bg-steps.png") no-repeat;
     background-size: cover;

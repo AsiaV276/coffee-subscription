@@ -1,0 +1,58 @@
+//media query breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1200px;
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+
+    #logo {
+        height: 15px;
+        width: auto;
+    }
+    .menu-icon {
+        display: block;
+    }
+    nav {
+        display: none;
+        text-transform: uppercase;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+@media only screen and (min-width: $breakpoint-tablet) {
+    header {
+    
+        #logo {
+            height: 20px;
+            width: auto;
+        }
+        .menu-icon {
+            display: none;
+        }
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 45%;
+        }
+    }
+
+}
+
+@media only screen and (min-width: $breakpoint-desktop) {
+    header {
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+    
+        #logo {
+            height: 35px;
+            width: auto;
+        }
+    }
+}

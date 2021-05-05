@@ -1,20 +1,3 @@
-const toggle = (event) => {
-    var currentElement = event.parentElement
-    if(currentElement.classList.contains('disabled') ){
-        console.log('do nothing. toggle is disabled');
-    }
-    else {
-        if(event.nextSibling.nextSibling.style.display !== 'none') {
-            event.children[1].style.transform = 'rotate(360deg)'
-                document.getElementById(event.parentElement.id).getElementsByClassName('options')[0].style.display = 'none'
-        }
-        else {
-            event.children[1].style.transform = 'rotate(180deg)'
-            document.getElementById(event.parentElement.id).getElementsByClassName('options')[0].style.display = 'flex'
-        }
-    }
-}
-
 
 var weeklySpan = document.getElementById('weekly-span')
 var biweeklySpan = document.getElementById('biweekly-span')
@@ -27,12 +10,32 @@ var total2 = document.getElementById('total2')
 
 
 var summary = {
-                howDrink: "", 
-                type: "", 
-                amount: "",
-                grind: "",
-                delivery: ""
+                drink: {id: "drink", selection: "", isOpen: true}, 
+                type: {id: "type", selection: "", isOpen: false}, 
+                amount: {id: "amount", selection: "", isOpen: false},
+                grind: {id: "grind", selection: "", isOpen: false},
+                delivery: {id: "delivery", selection: "", isOpen: false}
             }
+
+
+const toggle = (event) => {
+    var currentElement = event.parentElement
+    if(currentElement.classList.contains('disabled') ){
+        console.log('do nothing. toggle is disabled');
+    }
+    else {
+        if(summary[currentElement.id].isOpen === true) {
+            event.children[1].style.transform = 'rotate(360deg)'
+            document.getElementById(currentElement.id).getElementsByClassName('options')[0].style.display = 'none'
+            summary[currentElement.id].isOpen = false
+        }
+        else if (summary[currentElement.id].isOpen === false) {
+            event.children[1].style.transform = 'rotate(180deg)'
+            document.getElementById(currentElement.id).getElementsByClassName('options')[0].style.display = 'flex'
+            summary[currentElement.id].isOpen = true
+        }
+    }
+}
 
 //how do you drink your coffee?
 var selectedDrink = []
@@ -57,8 +60,8 @@ const drinkSelection = (clickedId) => {
     }
     else {
         document.getElementById('grind').classList.remove('disabled')
-        if(summary.grind !== '') {
-            var grindTitle = document.getElementById(summary.grind).children[0].innerHTML;  
+        if(summary.grind.selection !== '') {
+            var grindTitle = document.getElementById(summary.grind.selection).children[0].innerHTML;  
             document.getElementById('grind-span').innerHTML = grindTitle
             document.getElementById('grind-span2').innerHTML = grindTitle
         }
@@ -67,7 +70,7 @@ const drinkSelection = (clickedId) => {
         document.getElementById('pv2').innerHTML = 'as'
     }
 
-    summary.howDrink = clickedId;
+    summary.howDrink.selection = clickedId;
     var title = document.getElementById(clickedId).children[0].innerHTML;
     var typeSpan = document.getElementById('drink-span');
     typeSpan.innerHTML = title;
@@ -89,7 +92,7 @@ const typeSelection = (clickedId) => {
     }
     document.getElementById(clickedId).classList.add('item-box-active');
 
-    summary.type = clickedId;
+    summary.type.selection = clickedId;
     var title = document.getElementById(clickedId).children[0].innerHTML;
     var typeSpan = document.getElementById('type-span');
     typeSpan.innerHTML = title;
@@ -140,7 +143,7 @@ const amountSelection = (clickedId) => {
         monthlySpan.innerHTML = "42.00"
     }
 
-    summary.amount = clickedId;
+    summary.amount.selection = clickedId;
     var title = document.getElementById(clickedId).children[0].innerHTML;
     var typeSpan = document.getElementById('amount-span');
     typeSpan.innerHTML = title;
@@ -162,7 +165,7 @@ const grindSelection = (clickedId) => {
     }
     document.getElementById(clickedId).classList.add('item-box-active');
 
-    summary.grind = clickedId;
+    summary.grind.selection = clickedId;
     var title = document.getElementById(clickedId).children[0].innerHTML;
     var typeSpan = document.getElementById('grind-span');
     typeSpan.innerHTML = title;
@@ -184,7 +187,7 @@ const deliverySelection = (clickedId) => {
     }
     document.getElementById(clickedId).classList.add('item-box-active');
 
-    summary.delivery = clickedId;
+    summary.delivery.selection = clickedId;
     var title = document.getElementById(clickedId).children[0].innerHTML;
     var typeSpan = document.getElementById('delivery-span');
     typeSpan.innerHTML = title;
@@ -193,7 +196,7 @@ const deliverySelection = (clickedId) => {
 }
 
 const openModal = () => {
-    
+    console.log(summary);
     //If Every Week is selected, the Order Summary modal should show the per shipment 
     //price multiplied by 4. For example, if 250g weight is selected, the price would be $28.80/month
     if(selectedDelivery[0] === 'weekly') {

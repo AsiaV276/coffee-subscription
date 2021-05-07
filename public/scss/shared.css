@@ -16,12 +16,15 @@ body header #header-container {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 1;
   padding: 20px;
 }
 
 body header #header-container #logo {
-  height: 15px;
+  height: 20px;
   width: auto;
 }
 
@@ -64,14 +67,24 @@ body header #dropdown-menu-content a {
 }
 
 @media only screen and (min-width: 768px) {
-  body header #logo {
-    height: 20px;
+  body header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+  }
+  body header #header-container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body header #header-container #logo {
+    height: 30px;
     width: auto;
   }
-  body header .menu-icon {
+  body header #header-container .menu {
     display: none;
   }
-  body header nav {
+  body header #header-container nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -84,10 +97,29 @@ body header #dropdown-menu-content a {
             justify-content: space-between;
     width: 45%;
   }
+  body header #header-container nav a {
+    color: black;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   body header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+  }
+  body header #header-container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body header #header-container #logo {
+    height: 35px;
+  }
+  body header #header-container .menu {
+    display: none;
+  }
+  body header #header-container nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -95,11 +127,13 @@ body header #dropdown-menu-content a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 45%;
   }
-  body header #logo {
-    height: 35px;
-    width: auto;
+  body header #header-container nav a {
+    color: black;
   }
 }
 /*# sourceMappingURL=shared.css.map */

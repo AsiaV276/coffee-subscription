@@ -6,7 +6,7 @@ body {
 }
 
 body main {
-  margin-top: 65px;
+  margin-top: 75px;
 }
 
 body main .banner-margin {
@@ -364,10 +364,7 @@ body main #order-summary-modal #modal-content footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    height: 150px;
-  }
-  body main #plan #selection-section .selection-boxes .options .item-box {
-    height: 100%;
+    height: 200px;
   }
   body main #order-summary p {
     font-size: 22px;
@@ -394,6 +391,9 @@ body main #order-summary-modal #modal-content footer {
 }
 
 @media only screen and (min-width: 1200px) {
+  body main .banner-margin {
+    margin: 60px;
+  }
   body main .banner-margin #create-plan-banner {
     background: url("../assets/plan/desktop/image-hero-blackcup.jpg") no-repeat;
     background-size: cover;
@@ -416,11 +416,11 @@ body main #order-summary-modal #modal-content footer {
     display: none;
   }
   body main .banner-margin #create-plan-banner h1 {
-    font-size: 40px;
+    font-size: 60px;
   }
   body main .banner-margin #create-plan-banner p {
-    font-size: 15px;
-    width: 65%;
+    font-size: 20px;
+    width: 45%;
     line-height: 35px;
   }
   body main #plan-description {
@@ -433,9 +433,19 @@ body main #order-summary-modal #modal-content footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 10px;
+    gap: 25px;
     text-align: left;
     padding: 30px 20px 30px 20px;
+  }
+  body main #plan-description div .number {
+    font-size: 70px;
+  }
+  body main #plan-description div h3 {
+    font-size: 30px;
+  }
+  body main #plan-description div p {
+    font-size: 18px;
+    line-height: 35px;
   }
   body main #plan {
     display: -webkit-box;
@@ -470,6 +480,9 @@ body main #order-summary-modal #modal-content footer {
   }
   body main #plan #sidebar a:hover {
     color: black;
+  }
+  body main #order-summary {
+    margin-left: 33%;
   }
 }
 /*# sourceMappingURL=plan.css.map */

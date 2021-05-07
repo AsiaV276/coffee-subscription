@@ -184,31 +184,34 @@
     </section>
 
     <button onclick="openModal()">Create my plan!</button>
+
+    <!-- Modal -->
+    <section id="order-summary-modal">
+      <div id="modal-content">
+        <h4>Order Summary</h4>
+        <p>“I drink coffee <span id="pv2"></span> <span id="drink-span2">_____</span>, with a <span id="type-span2">_____</span>
+          type of bean. <span id="amount-span2">_____</span> ground ala <span id="grind-span2">_____</span>, 
+        sent to me <span id="delivery-span2">_____</span>.”</p>
+    
+        <p>Is this correct? You can proceed to checkout or go back to plan selection if something 
+        is off. Subscription discount codes can also be redeemed at the checkout.
+        </p>
+        <button>
+          Checkout - $<span id="total">_____</span> /month
+        </button>
+        <footer>
+          <p>$<span id="total2">_____</span> /month</p>
+          <button id="btn2">
+            Checkout
+          </button>
+        </footer>
+      </div>
+    </section>
+    <!-- End modal -->
+  
   </main>
 
-  <!-- Modal -->
-  <section id="order-summary-modal">
-    <div id="modal-content">
-      <h4>Order Summary</h4>
-      <p>“I drink coffee <span id="pv2"></span> <span id="drink-span2">_____</span>, with a <span id="type-span2">_____</span>
-         type of bean. <span id="amount-span2">_____</span> ground ala <span id="grind-span2">_____</span>, 
-      sent to me <span id="delivery-span2">_____</span>.”</p>
   
-      <p>Is this correct? You can proceed to checkout or go back to plan selection if something 
-      is off. Subscription discount codes can also be redeemed at the checkout.
-      </p>
-      <button>
-        Checkout - $<span id="total">_____</span> /month
-      </button>
-      <footer>
-        <p>$<span id="total2">_____</span> /month</p>
-        <button id="btn2">
-          Checkout
-        </button>
-      </footer>
-    </div>
-  </section>
-  <!-- End modal -->
 
   Home
   About us

@@ -6,14 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-
+  <link rel="stylesheet" href="./scss/shared.css">
   <title>Frontend Mentor | Coffeeroasters subscription site</title>
 </head>
 
 <body>
-  Home
-  About us
-  Create your plan
+  <header>
+    <div id="header-container">
+      <a href="./index.html"><img id="logo" src="./assets/shared/desktop/logo.svg" alt=""></a>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About us</a>
+        <a href="./plan.html">Create your plan</a>
+      </nav>
+      <div class="menu">
+        <div id="menu-icon" onclick="openMenu()">
+          <img src="./assets/shared/mobile/icon-hamburger.svg" alt="" id="hamburger" class="menu-icon">
+          <img src="./assets/shared/mobile/icon-close.svg" alt="" id="close" class="menu-icon">
+        </div>
+      </div>
+    </div>
+    <nav id="dropdown-menu-content">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About us</a>
+      <a href="./plan.html">Create your plan</a>
+    </nav>
+  </header>
 
   About us
   Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of 

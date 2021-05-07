@@ -14,7 +14,7 @@ body {
     text-align: center;
     font-family: 'Barlow', sans-serif;
     main {
-        margin-top: 65px;
+        margin-top: 75px;
         .banner-margin {
             margin: 20px;
             #create-plan-banner {
@@ -314,19 +314,13 @@ body {
             #plan {
                 #selection-section {
                     .selection-boxes {
-
                         .options {
                             display: flex;
                             flex-direction: row;
-                            height: 150px;
-                            .item-box {
-                                height: 100%;
-                            }
+                            height: 200px;
                         }
-                        
                     }
                 }
-            
             }
             #order-summary {
                 p {
@@ -358,6 +352,7 @@ body {
 
         @media only screen and (min-width: $breakpoint-desktop) {
             .banner-margin {
+                margin: 60px;
                 #create-plan-banner {
                     background: url('../assets/plan/desktop/image-hero-blackcup.jpg') no-repeat;
                     background-size: cover;
@@ -366,7 +361,6 @@ body {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    //height: auto;
                     padding: 35px;
                     text-align: left;
                 
@@ -374,11 +368,11 @@ body {
                         display: none;
                     }
                     h1 {
-                        font-size: 40px;
+                        font-size: 60px;
                     }
                     p {
-                        font-size: 15px;
-                        width: 65%;
+                        font-size: 20px;
+                        width: 45%;
                         line-height: 35px;
                     }
                 }
@@ -389,9 +383,22 @@ body {
                 background-size: cover;
                 display: flex;
                 flex-direction: row;
-                gap: 10px;
+                gap: 25px;
                 text-align: left;
-                padding: 30px 20px 30px 20px 
+                padding: 30px 20px 30px 20px;
+
+                div {
+                    .number {
+                        font-size: 70px;
+                    }
+                    h3 {
+                        font-size: 30px;
+                    } 
+                    p {
+                        font-size: 18px;
+                        line-height: 35px;
+                    }
+                }
             }
             #plan {
                 display: flex;
@@ -419,6 +426,9 @@ body {
                 #selection-section {
                     //flex-grow: 3;
                 }
+            }
+            #order-summary {
+                margin-left: 33%;
             }
 
         }

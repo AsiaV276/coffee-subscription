@@ -15,9 +15,21 @@
 
 <body>
   <header>
-    <img id="logo" src="./assets/shared/desktop/logo.svg" alt="">
-    <img src="./assets/shared/mobile/icon-hamburger.svg" alt="" class="menu-icon" onclick="toggle()">
-    <nav>
+    <div id="header-container">
+      <a href="./index.html"><img id="logo" src="./assets/shared/desktop/logo.svg" alt=""></a>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About us</a>
+        <a href="./plan.html">Create your plan</a>
+      </nav>
+      <div class="menu">
+        <div id="menu-icon" onclick="openMenu()">
+          <img src="./assets/shared/mobile/icon-hamburger.svg" alt="" id="hamburger" class="menu-icon">
+          <img src="./assets/shared/mobile/icon-close.svg" alt="" id="close" class="menu-icon">
+        </div>
+      </div>
+    </div>
+    <nav id="dropdown-menu-content">
       <a href="./index.html">Home</a>
       <a href="./about.html">About us</a>
       <a href="./plan.html">Create your plan</a>
@@ -63,92 +75,102 @@
     </section>
 
     <section id="plan">
-      <div id="drink" class="selection-boxes">
-        <div class="toggle" onclick="toggle(this)"><h4>How do you drink your coffee?</h4><img class="arrow" src="./assets/plan/desktop/icon-arrow.svg" alt=""></div>
-        <div class="options">
-          <div id="capsule" class="item-box" onclick="drinkSelection(this.id)">
-            <h3>Capsule</h3>
-            <p>Compatible with Nespresso systems and similar brewers</p>  
-          </div>
-          <div id="filterDrink" class="item-box" onclick="drinkSelection(this.id)">
-            <h3>Filter</h3>
-            <p>For pour over or drip methods like Aeropress, Chemex, and V60</p>
-          </div>
-          <div id="espresso" class="item-box" onclick="drinkSelection(this.id)">
-            <h3>Espresso</h3>
-            <p>Dense and finely ground beans for an intense, flavorful experience</p>
-          </div>
-        </div>
-      </div>
+      <nav id="sidebar">
+        <a href="#drink">01 Preferences</a>
+        <a href="#type">02 Bean type</a>
+        <a href="#amount">03 Quantity</a>
+        <a href="#grind">04 Grind option</a>
+        <a href="#delivery">05 Deliveries</a>
+      </nav>
       
-      <div id="type" class="selection-boxes">
-        <div class="toggle" onclick="toggle(this)"><h4>What type of coffee?</h4><img class="arrow" src="./assets/plan/desktop/icon-arrow.svg" alt=""></div>
-        <div class="options">
-          <div id="single" class="item-box" onclick="typeSelection(this.id)">
-            <h3>Single origin</h3>
-            <p>Distinct, high quality coffee from a specific family-owned farm</p>  
-          </div>
-          <div id="decaf" class="item-box" onclick="typeSelection(this.id)">
-            <h3>Decaf</h3>
-            <p>Just like regular coffee, except the caffeine has been removed</p>  
-          </div>
-          <div id="blended" class="item-box" onclick="typeSelection(this.id)">
-            <h3>Blended</h3>
-            <p>Combination of two or three dark roasted beans of organic coffees</p>
+      <div id="selection-section">
+        <div id="drink" class="selection-boxes">
+          <div class="toggle" onclick="toggle(this)"><h4>How do you drink your coffee?</h4><img class="arrow" src="./assets/plan/desktop/icon-arrow.svg" alt=""></div>
+          <div class="options">
+            <div id="capsule" class="item-box" onclick="drinkSelection(this.id)">
+              <h3>Capsule</h3>
+              <p>Compatible with Nespresso systems and similar brewers</p>  
+            </div>
+            <div id="filterDrink" class="item-box" onclick="drinkSelection(this.id)">
+              <h3>Filter</h3>
+              <p>For pour over or drip methods like Aeropress, Chemex, and V60</p>
+            </div>
+            <div id="espresso" class="item-box" onclick="drinkSelection(this.id)">
+              <h3>Espresso</h3>
+              <p>Dense and finely ground beans for an intense, flavorful experience</p>
+            </div>
           </div>
         </div>
-      </div>
+        
+        <div id="type" class="selection-boxes">
+          <div class="toggle" onclick="toggle(this)"><h4>What type of coffee?</h4><img class="arrow" src="./assets/plan/desktop/icon-arrow.svg" alt=""></div>
+          <div class="options">
+            <div id="single" class="item-box" onclick="typeSelection(this.id)">
+              <h3>Single origin</h3>
+              <p>Distinct, high quality coffee from a specific family-owned farm</p>  
+            </div>
+            <div id="decaf" class="item-box" onclick="typeSelection(this.id)">
+              <h3>Decaf</h3>
+              <p>Just like regular coffee, except the caffeine has been removed</p>  
+            </div>
+            <div id="blended" class="item-box" onclick="typeSelection(this.id)">
+              <h3>Blended</h3>
+              <p>Combination of two or three dark roasted beans of organic coffees</p>
+            </div>
+          </div>
+        </div>
 
-      <div id="amount" class="selection-boxes">
-        <div class="toggle" onclick="toggle(this)"><h4>How much would you like?</h4><img class="arrow" src="./assets/plan/desktop/icon-arrow.svg" alt=""></div>
-        <div class="options">
-          <div id="250g" class="item-box" onclick="amountSelection(this.id)">
-            <h3>250g</h3>
-            <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
-          </div>
-          <div id="500g" class="item-box" onclick="amountSelection(this.id)">
-            <h3>500g</h3>
-            <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
-          </div>
-          <div id="1000g" class="item-box" onclick="amountSelection(this.id)">
-            <h3>1000g</h3>
-            <p>Perfect for offices and events. Yields about 90 delightful cups.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div id="grind" class="selection-boxes">
-        <div class="toggle" onclick="toggle(this)"><h4>Want us to grind them?</h4><img class="arrow" src="./assets/plan/desktop/icon-arrow.svg" alt=""></div>
-        <div class="options">
-          <div id="wholebean" class="item-box" onclick="grindSelection(this.id)">
-            <h3>Wholebean</h3>
-            <p>Best choice if you cherish the full sensory experience</p>
-          </div>
-          <div id="filterGrind" class="item-box" onclick="grindSelection(this.id)">
-            <h3>Filter</h3>
-            <p>For drip or pour-over coffee methods such as V60 or Aeropress</p>
-          </div>
-          <div id="cafetiere" class="item-box" onclick="grindSelection(this.id)">
-            <h3>Cafetiére</h3>
-            <p>Course ground beans specially suited for french press coffee</p>
+        <div id="amount" class="selection-boxes">
+          <div class="toggle" onclick="toggle(this)"><h4>How much would you like?</h4><img class="arrow" src="./assets/plan/desktop/icon-arrow.svg" alt=""></div>
+          <div class="options">
+            <div id="250g" class="item-box" onclick="amountSelection(this.id)">
+              <h3>250g</h3>
+              <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
+            </div>
+            <div id="500g" class="item-box" onclick="amountSelection(this.id)">
+              <h3>500g</h3>
+              <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
+            </div>
+            <div id="1000g" class="item-box" onclick="amountSelection(this.id)">
+              <h3>1000g</h3>
+              <p>Perfect for offices and events. Yields about 90 delightful cups.</p>
+            </div>
           </div>
         </div>
-      </div>
+        
+        <div id="grind" class="selection-boxes">
+          <div class="toggle" onclick="toggle(this)"><h4>Want us to grind them?</h4><img class="arrow" src="./assets/plan/desktop/icon-arrow.svg" alt=""></div>
+          <div class="options">
+            <div id="wholebean" class="item-box" onclick="grindSelection(this.id)">
+              <h3>Wholebean</h3>
+              <p>Best choice if you cherish the full sensory experience</p>
+            </div>
+            <div id="filterGrind" class="item-box" onclick="grindSelection(this.id)">
+              <h3>Filter</h3>
+              <p>For drip or pour-over coffee methods such as V60 or Aeropress</p>
+            </div>
+            <div id="cafetiere" class="item-box" onclick="grindSelection(this.id)">
+              <h3>Cafetiére</h3>
+              <p>Course ground beans specially suited for french press coffee</p>
+            </div>
+          </div>
+        </div>
 
-      <div id="delivery" class="selection-boxes">
-        <div class="toggle" onclick="toggle(this)"><h4>How often should we deliver?</h4><img class="arrow" src="./assets/plan/desktop/icon-arrow.svg" alt=""></div>
-        <div class="options">
-          <div id="weekly" class="item-box" onclick="deliverySelection(this.id)">
-            <h3>Every week</h3>
-            <p>$<span id="weekly-span">_____</span> per shipment. Includes free first-class shipping.</p>
-          </div>
-          <div id="biweekly" class="item-box" onclick="deliverySelection(this.id)">
-            <h3>Every 2 weeks</h3>
-            <p>$<span id="biweekly-span">_____</span> per shipment. Includes free priority shipping.</p>
-          </div>
-          <div id="monthly" class="item-box" onclick="deliverySelection(this.id)">
-            <h3>Every month</h3>
-            <p>$<span id="monthly-span">_____</span> per shipment. Includes free priority shipping.</p>
+        <div id="delivery" class="selection-boxes">
+          <div class="toggle" onclick="toggle(this)"><h4>How often should we deliver?</h4><img class="arrow" src="./assets/plan/desktop/icon-arrow.svg" alt=""></div>
+          <div class="options">
+            <div id="weekly" class="item-box" onclick="deliverySelection(this.id)">
+              <h3>Every week</h3>
+              <p>$<span id="weekly-span">_____</span> per shipment. Includes free first-class shipping.</p>
+            </div>
+            <div id="biweekly" class="item-box" onclick="deliverySelection(this.id)">
+              <h3>Every 2 weeks</h3>
+              <p>$<span id="biweekly-span">_____</span> per shipment. Includes free priority shipping.</p>
+            </div>
+            <div id="monthly" class="item-box" onclick="deliverySelection(this.id)">
+              <h3>Every month</h3>
+              <p>$<span id="monthly-span">_____</span> per shipment. Includes free priority shipping.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -163,18 +185,6 @@
 
     <button onclick="openModal()">Create my plan!</button>
   </main>
-
-  
-  
-  
-  01 Preferences
-  02 Bean type
-  03 Quantity
-  04 Grind option
-  05 Deliveries
-  
-
-  
 
   <!-- Modal -->
   <section id="order-summary-modal">
@@ -205,5 +215,6 @@
   Create your plan
 </body>
 <script src="plan.js"></script>
+<script src="./shared.js"></script>
 
 </html>

@@ -5,11 +5,15 @@ body {
   font-family: 'Barlow', sans-serif;
 }
 
-body .banner-margin {
+body main {
+  margin-top: 65px;
+}
+
+body main .banner-margin {
   margin: 20px;
 }
 
-body .banner-margin #create-plan-banner {
+body main .banner-margin #create-plan-banner {
   background: url("../assets/plan/mobile/image-hero-blackcup.jpg") no-repeat;
   background-size: cover;
   width: 100%;
@@ -21,19 +25,19 @@ body .banner-margin #create-plan-banner {
           box-sizing: border-box;
 }
 
-body .banner-margin #create-plan-banner h1 {
+body main .banner-margin #create-plan-banner h1 {
   font-size: 30px;
   margin: 0;
   font-weight: 500;
 }
 
-body .banner-margin #create-plan-banner p {
+body main .banner-margin #create-plan-banner p {
   font-size: 12px;
   line-height: 25px;
   word-spacing: 1.5px;
 }
 
-body #plan-description {
+body main #plan-description {
   margin: 0;
   background: url("../assets/plan/mobile/bg-steps.png") no-repeat;
   background-size: cover;
@@ -42,39 +46,43 @@ body #plan-description {
   border-radius: 7px;
 }
 
-body #plan-description div .number {
+body main #plan-description div .number {
   color: #fdd68a;
   font-size: 55px;
   padding-top: 50px;
 }
 
-body #plan-description div h2 {
+body main #plan-description div h2 {
   font-weight: 500;
   margin: 0;
 }
 
-body #plan-description div h3 {
+body main #plan-description div h3 {
   font-weight: 500;
   margin: 0;
   padding: 10px 0px 10px 0px;
 }
 
-body #plan-description div p {
+body main #plan-description div p {
   margin: 0;
   font-size: 12px;
   line-height: 20px;
   word-spacing: 1.5px;
 }
 
-body #plan-description div:last-child p {
+body main #plan-description div:last-child p {
   padding-bottom: 50px;
 }
 
-body #plan {
+body main #plan {
   margin: 20px;
 }
 
-body #plan .selection-boxes {
+body main #plan #sidebar {
+  display: none;
+}
+
+body main #plan #selection-section .selection-boxes {
   margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,7 +94,7 @@ body #plan .selection-boxes {
   text-align: left;
 }
 
-body #plan .selection-boxes .toggle {
+body main #plan #selection-section .selection-boxes .toggle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,19 +107,19 @@ body #plan .selection-boxes .toggle {
   cursor: pointer;
 }
 
-body #plan .selection-boxes .toggle h4 {
+body main #plan #selection-section .selection-boxes .toggle h4 {
   font-weight: 400;
   font-size: 22px;
 }
 
-body #plan .selection-boxes .toggle .arrow {
+body main #plan #selection-section .selection-boxes .toggle .arrow {
   height: 13px;
   width: auto;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-body #plan .selection-boxes .options {
+body main #plan #selection-section .selection-boxes .options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,76 +127,76 @@ body #plan .selection-boxes .options {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 15px;
 }
 
-body #plan .selection-boxes .options .item-box {
+body main #plan #selection-section .selection-boxes .options .item-box {
   display: block;
   background-color: #FEFCF7;
   border-radius: 7px;
-  padding: 20px;
-  margin-top: 10px;
+  padding: 30px 20px 65px 20px;
   cursor: pointer;
 }
 
-body #plan .selection-boxes .options .item-box h3 {
+body main #plan #selection-section .selection-boxes .options .item-box h3 {
   margin: 0;
   font-weight: 500;
 }
 
-body #plan .selection-boxes .options .item-box p {
+body main #plan #selection-section .selection-boxes .options .item-box p {
   margin-bottom: 0;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
 }
 
-body #plan .selection-boxes .options .item-box:hover {
+body main #plan #selection-section .selection-boxes .options .item-box:hover {
   background-color: #fdd68a;
 }
 
-body #plan .selection-boxes .options .item-box-active {
+body main #plan #selection-section .selection-boxes .options .item-box-active {
   background-color: #0E8784;
   color: white;
 }
 
-body #plan .selection-boxes .options .item-box-active:hover {
+body main #plan #selection-section .selection-boxes .options .item-box-active:hover {
   background-color: #0E8784;
   color: white;
 }
 
-body #plan #type .toggle .arrow,
-body #plan #amount .toggle .arrow,
-body #plan #grind .toggle .arrow,
-body #plan #delivery .toggle .arrow {
+body main #plan #selection-section #type .toggle .arrow,
+body main #plan #selection-section #amount .toggle .arrow,
+body main #plan #selection-section #grind .toggle .arrow,
+body main #plan #selection-section #delivery .toggle .arrow {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-body #plan #type .options,
-body #plan #amount .options,
-body #plan #grind .options,
-body #plan #delivery .options {
+body main #plan #selection-section #type .options,
+body main #plan #selection-section #amount .options,
+body main #plan #selection-section #grind .options,
+body main #plan #selection-section #delivery .options {
   display: none;
 }
 
-body #plan .disabled .toggle {
+body main #plan #selection-section .disabled .toggle {
   cursor: not-allowed;
 }
 
-body #plan .disabled .toggle h4 {
+body main #plan #selection-section .disabled .toggle h4 {
   opacity: 50%;
 }
 
-body #plan .disabled .toggle .arrow {
+body main #plan #selection-section .disabled .toggle .arrow {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   opacity: 60%;
 }
 
-body #plan .disabled .options {
+body main #plan #selection-section .disabled .options {
   display: none;
 }
 
-body #order-summary {
+body main #order-summary {
   margin: 100px 20px 20px 20px;
   padding: 20px;
   border-radius: 7px;
@@ -197,28 +205,28 @@ body #order-summary {
   text-align: left;
 }
 
-body #order-summary h4 {
+body main #order-summary h4 {
   margin: 0;
   font-weight: bold;
   color: #83888F;
   text-transform: uppercase;
 }
 
-body #order-summary p {
+body main #order-summary p {
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
 }
 
-body #order-summary #drink-span,
-body #order-summary #type-span,
-body #order-summary #amount-span,
-body #order-summary #grind-span,
-body #order-summary #delivery-span {
+body main #order-summary #drink-span,
+body main #order-summary #type-span,
+body main #order-summary #amount-span,
+body main #order-summary #grind-span,
+body main #order-summary #delivery-span {
   color: #0E8784;
 }
 
-body button {
+body main button {
   background-color: #0E8784;
   border: none;
   color: white;
@@ -227,11 +235,11 @@ body button {
   cursor: pointer;
 }
 
-body button:hover {
+body main button:hover {
   opacity: 75%;
 }
 
-body #order-summary-modal {
+body main #order-summary-modal {
   display: none;
   /* Hidden by default */
   position: fixed;
@@ -252,7 +260,7 @@ body #order-summary-modal {
   /* Black w/ opacity */
 }
 
-body #order-summary-modal #modal-content {
+body main #order-summary-modal #modal-content {
   background-color: #fefefe;
   margin: 15% auto;
   /* 15% from the top and centered */
@@ -262,15 +270,15 @@ body #order-summary-modal #modal-content {
   border-radius: 7px;
 }
 
-body #order-summary-modal #modal-content #drink-span2,
-body #order-summary-modal #modal-content #type-span2,
-body #order-summary-modal #modal-content #amount-span2,
-body #order-summary-modal #modal-content #grind-span2,
-body #order-summary-modal #modal-content #delivery-span2 {
+body main #order-summary-modal #modal-content #drink-span2,
+body main #order-summary-modal #modal-content #type-span2,
+body main #order-summary-modal #modal-content #amount-span2,
+body main #order-summary-modal #modal-content #grind-span2,
+body main #order-summary-modal #modal-content #delivery-span2 {
   color: #0E8784;
 }
 
-body #order-summary-modal #modal-content h4 {
+body main #order-summary-modal #modal-content h4 {
   background-color: #333D4B;
   color: white;
   margin: 0;
@@ -282,7 +290,7 @@ body #order-summary-modal #modal-content h4 {
   text-align: left;
 }
 
-body #order-summary-modal #modal-content p {
+body main #order-summary-modal #modal-content p {
   padding: 20px 20px 0px 20px;
   font-size: 20px;
   line-height: 25px;
@@ -290,22 +298,22 @@ body #order-summary-modal #modal-content p {
   text-align: left;
 }
 
-body #order-summary-modal #modal-content p:last-of-type {
+body main #order-summary-modal #modal-content p:last-of-type {
   font-size: 14px;
   text-align: left;
 }
 
-body #order-summary-modal #modal-content button {
+body main #order-summary-modal #modal-content button {
   width: auto;
   margin: 20px;
 }
 
-body #order-summary-modal #modal-content footer {
+body main #order-summary-modal #modal-content footer {
   display: none;
 }
 
-@media only screen and (min-width: 768px) {
-  body .banner-margin #create-plan-banner {
+@media only screen and (min-width: 650px) {
+  body main .banner-margin #create-plan-banner {
     background: url("../assets/plan/tablet/image-hero-blackcup.jpg") no-repeat;
     background-size: cover;
     width: 100%;
@@ -323,18 +331,18 @@ body #order-summary-modal #modal-content footer {
     padding: 35px;
     text-align: left;
   }
-  body .banner-margin #create-plan-banner br {
+  body main .banner-margin #create-plan-banner br {
     display: none;
   }
-  body .banner-margin #create-plan-banner h1 {
+  body main .banner-margin #create-plan-banner h1 {
     font-size: 40px;
   }
-  body .banner-margin #create-plan-banner p {
+  body main .banner-margin #create-plan-banner p {
     font-size: 15px;
     width: 65%;
     line-height: 35px;
   }
-  body #plan-description {
+  body main #plan-description {
     background: url("../assets/plan/tablet/bg-steps.png") no-repeat;
     background-size: cover;
     display: -webkit-box;
@@ -348,7 +356,7 @@ body #order-summary-modal #modal-content footer {
     text-align: left;
     padding: 30px 20px 30px 20px;
   }
-  body #plan .selection-boxes .options {
+  body main #plan #selection-section .selection-boxes .options {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -356,38 +364,37 @@ body #order-summary-modal #modal-content footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 10px;
     height: 150px;
   }
-  body #plan .selection-boxes .options .item-box {
+  body main #plan #selection-section .selection-boxes .options .item-box {
     height: 100%;
   }
-  body #order-summary p {
+  body main #order-summary p {
     font-size: 22px;
   }
-  body #order-summary-modal #modal-content p {
+  body main #order-summary-modal #modal-content p {
     padding-left: 40px;
     padding-right: 40px;
   }
-  body #order-summary-modal #modal-content button {
+  body main #order-summary-modal #modal-content button {
     display: none;
   }
-  body #order-summary-modal #modal-content footer {
+  body main #order-summary-modal #modal-content footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  body #order-summary-modal #modal-content footer p {
+  body main #order-summary-modal #modal-content footer p {
     font-size: 20px !important;
     color: black;
   }
-  body #order-summary-modal #modal-content footer button {
+  body main #order-summary-modal #modal-content footer button {
     display: block;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  body .banner-margin #create-plan-banner {
+  body main .banner-margin #create-plan-banner {
     background: url("../assets/plan/desktop/image-hero-blackcup.jpg") no-repeat;
     background-size: cover;
     width: 100%;
@@ -405,18 +412,18 @@ body #order-summary-modal #modal-content footer {
     padding: 35px;
     text-align: left;
   }
-  body .banner-margin #create-plan-banner br {
+  body main .banner-margin #create-plan-banner br {
     display: none;
   }
-  body .banner-margin #create-plan-banner h1 {
+  body main .banner-margin #create-plan-banner h1 {
     font-size: 40px;
   }
-  body .banner-margin #create-plan-banner p {
+  body main .banner-margin #create-plan-banner p {
     font-size: 15px;
     width: 65%;
     line-height: 35px;
   }
-  body #plan-description {
+  body main #plan-description {
     background: url("../assets/plan/desktop/bg-steps.png") no-repeat;
     background-size: cover;
     display: -webkit-box;
@@ -429,6 +436,40 @@ body #order-summary-modal #modal-content footer {
     gap: 10px;
     text-align: left;
     padding: 30px 20px 30px 20px;
+  }
+  body main #plan {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body main #plan #sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 90px 35px;
+    width: 33%;
+    text-align: left;
+    font-size: 20px;
+  }
+  body main #plan #sidebar a {
+    text-decoration: none;
+    padding: 10px;
+    color: #83888F;
+  }
+  body main #plan #sidebar a:not(:last-of-type) {
+    border-bottom: solid 1px #83888F;
+    width: 75%;
+  }
+  body main #plan #sidebar a:hover {
+    color: black;
   }
 }
 /*# sourceMappingURL=plan.css.map */

@@ -70,7 +70,7 @@ const drinkSelection = (clickedId) => {
         document.getElementById('pv2').innerHTML = 'as'
     }
 
-    summary.howDrink.selection = clickedId;
+    summary.drink.selection = clickedId;
     var title = document.getElementById(clickedId).children[0].innerHTML;
     var typeSpan = document.getElementById('drink-span');
     typeSpan.innerHTML = title;

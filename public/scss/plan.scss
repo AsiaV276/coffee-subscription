@@ -5,7 +5,7 @@ $lightcream : #FEFCF7;
 $grey : #83888F;
 
 //media query breakpoints
-$breakpoint-tablet: 768px;
+$breakpoint-tablet: 650px;
 $breakpoint-desktop: 1200px;
 
 body {
@@ -13,381 +13,415 @@ body {
     padding: 0;
     text-align: center;
     font-family: 'Barlow', sans-serif;
-
-    .banner-margin {
-        margin: 20px;
-        #create-plan-banner {
-            background: url('../assets/plan/mobile/image-hero-blackcup.jpg') no-repeat;
-            background-size: cover;
-            width: 100%;
-            color: white;
-            padding: 75px 15px;
-            border-radius: 7px;
-            margin-bottom: 5em;
-            box-sizing: border-box;
-        
-            h1 {
-                font-size: 30px;
-                margin: 0;
-                font-weight: 500;
-            }
-            p {
-                font-size: 12px;
-                line-height: 25px;
-                word-spacing: 1.5px;
-            }
-        }
-    }
-
-    #plan-description {
-        margin: 0;
-        background: url('../assets/plan/mobile/bg-steps.png') no-repeat;
-        background-size: cover;
-        padding: 20px;
-        color: white;
-        border-radius: 7px;
-
-        div {
-            .number {
-                color: $paleorange;
-                font-size: 55px;
-                padding-top: 50px;
-            }
-            h2 {
-                font-weight: 500;
-                margin: 0;
-            }
-            h3 {
-                font-weight: 500;
-                margin: 0;
-                padding: 10px 0px 10px 0px;
-            }
-            p {
-                margin: 0;
-                font-size: 12px;
-                line-height: 20px;
-                word-spacing: 1.5px;
-                //padding-bottom: 50px;
-            }
-        }
-        div:last-child p {
-            padding-bottom: 50px;
-        }
-    }
-
-    #plan {
-        margin: 20px;
-        .selection-boxes {
-            margin-top: 50px;
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-            //border-radius: 10px;
-            //padding: 5px;
-
-            .toggle {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                cursor: pointer;
-                h4 {
-                    font-weight: 400;
-                    font-size: 22px;
-                }
-                .arrow {
-                    height: 13px;
-                    width: auto;
-                    transform: rotate(180deg);
-                }
-            }
-            .options {
-                 display: flex;
-                 flex-direction: column;  
-                
-                .item-box {
-                    display: block;
-                    background-color: $lightcream;
-                    border-radius:7px;
-                    padding: 20px;
-                    margin-top: 10px;
-                    cursor: pointer;
-
-                    h3 {
-                        margin: 0;
-                        font-weight: 500;
-                    }
-                    p {
-                        margin-bottom: 0;
-                        font-size: 12px;
-                        line-height: 20px;
-                    }
-                }
-                .item-box:hover {
-                    background-color: $paleorange;
-                }
-                .item-box-active {
-                    background-color: $darkcyan;
-                    color: white;
-                }
-                .item-box-active:hover {
-                    background-color: $darkcyan;
-                    color: white;
-                }
-            }
-        }
-        #type,
-        #amount,
-        #grind,
-        #delivery {
-            .toggle {
-                .arrow {
-                    transform: rotate(360deg);
-                }
-            }
-            .options {
-                display: none;
-            }
-        }
-        .disabled {
-            .toggle {
-                cursor: not-allowed;
-                h4 {
-                    opacity: 50%;
-                }
-                .arrow {
-                    transform: rotate(360deg);
-                    opacity: 60%;
-                }
-            }
-            .options {
-                display: none;
-            }
-        }
-    }
-
-    #order-summary {
-        margin: 100px 20px 20px 20px;
-        padding: 20px;
-        border-radius: 7px;
-        background-color: $darkgreyblue;
-        color: white;
-        text-align: left;
-
-        h4 {
-            margin: 0;
-            font-weight: bold;
-            color: $grey;
-            text-transform: uppercase;
-        }
-        p {
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 30px;
-        }
-        #drink-span,
-        #type-span,
-        #amount-span,
-        #grind-span,
-        #delivery-span {
-            color: $darkcyan;
-        }
-    }
-
-    button {
-        background-color: $darkcyan;
-        border: none;
-        color: white;
-        padding: 12px 35px;
-        border-radius: 3px;
-        cursor: pointer;
-    }
-    button:hover {
-        opacity: 75%;
-    }
-
-    #order-summary-modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-       
-        #modal-content {
-            background-color: #fefefe;
-            margin: 15% auto; /* 15% from the top and centered */
-            //padding: 20px;
-            border: 1px solid #888;
-            width: 85%; /* Could be more or less, depending on screen size */
-            border-radius: 7px;
-            //text-align: center;
-
-            #drink-span2,
-            #type-span2,
-            #amount-span2,
-            #grind-span2,
-            #delivery-span2 {
-                color: $darkcyan;
-            }
-            h4 {
-                background-color: $darkgreyblue;
-                color: white;
-                margin: 0;
-                border-top-left-radius: 7px;
-                border-top-right-radius: 7px;
-                padding: 20px;
-                font-weight: 500;
-                font-size: 20px;
-                text-align: left;
-            }
-            p {
-                padding: 20px 20px 0px 20px;
-                font-size: 20px;
-                line-height: 25px;
-                color: $grey;
-                text-align: left;
-            }
-            p:last-of-type {
-                font-size: 14px;
-                text-align: left;
-                
-            }
-            button {
-                width: auto;
-                margin: 20px;
-                
-            }
-            footer {
-                display: none;
-            }
-        }
-    }
-
-    @media only screen and (min-width: $breakpoint-tablet) {
-
-
+    main {
+        margin-top: 65px;
         .banner-margin {
+            margin: 20px;
             #create-plan-banner {
-                background: url('../assets/plan/tablet/image-hero-blackcup.jpg') no-repeat;
+                background: url('../assets/plan/mobile/image-hero-blackcup.jpg') no-repeat;
                 background-size: cover;
                 width: 100%;
-                height: 400px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                //height: auto;
-                padding: 35px;
-                text-align: left;
+                color: white;
+                padding: 75px 15px;
+                border-radius: 7px;
+                margin-bottom: 5em;
+                box-sizing: border-box;
             
-                br {
-                    display: none;
-                }
                 h1 {
-                    font-size: 40px;
+                    font-size: 30px;
+                    margin: 0;
+                    font-weight: 500;
                 }
                 p {
-                    font-size: 15px;
-                    width: 65%;
-                    line-height: 35px;
+                    font-size: 12px;
+                    line-height: 25px;
+                    word-spacing: 1.5px;
                 }
             }
         }
 
         #plan-description {
-            background: url('../assets/plan/tablet/bg-steps.png') no-repeat;
+            margin: 0;
+            background: url('../assets/plan/mobile/bg-steps.png') no-repeat;
             background-size: cover;
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            text-align: left;
-            padding: 30px 20px 30px 20px 
+            padding: 20px;
+            color: white;
+            border-radius: 7px;
+
+            div {
+                .number {
+                    color: $paleorange;
+                    font-size: 55px;
+                    padding-top: 50px;
+                }
+                h2 {
+                    font-weight: 500;
+                    margin: 0;
+                }
+                h3 {
+                    font-weight: 500;
+                    margin: 0;
+                    padding: 10px 0px 10px 0px;
+                }
+                p {
+                    margin: 0;
+                    font-size: 12px;
+                    line-height: 20px;
+                    word-spacing: 1.5px;
+                    //padding-bottom: 50px;
+                }
+            }
+            div:last-child p {
+                padding-bottom: 50px;
+            }
         }
 
         #plan {
-            .selection-boxes {
-
-                .options {
+            margin: 20px;
+            #sidebar {
+                display: none;
+            }
+            #selection-section {
+                .selection-boxes {
+                    margin-top: 50px;
                     display: flex;
-                    flex-direction: row;
-                    gap: 10px;
-                    height: 150px;
-                    .item-box {
-                        height: 100%;
+                    flex-direction: column;
+                    text-align: left;
+                    //border-radius: 10px;
+                    //padding: 5px;
+
+                    .toggle {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        cursor: pointer;
+                        h4 {
+                            font-weight: 400;
+                            font-size: 22px;
+                        }
+                        .arrow {
+                            height: 13px;
+                            width: auto;
+                            transform: rotate(180deg);
+                        }
+                    }
+                    .options {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        .item-box {
+                            display: block;
+                            background-color: $lightcream;
+                            border-radius:7px;
+                            padding: 30px 20px 65px 20px;
+                            cursor: pointer;
+                            h3 {
+                                margin: 0;
+                                font-weight: 500;
+                            }
+                            p {
+                                margin-bottom: 0;
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
+                        }
+                        .item-box:hover {
+                            background-color: $paleorange;
+                        }
+                        .item-box-active {
+                            background-color: $darkcyan;
+                            color: white;
+                        }
+                        .item-box-active:hover {
+                            background-color: $darkcyan;
+                            color: white;
+                        }
                     }
                 }
-                
+                #type,
+                #amount,
+                #grind,
+                #delivery {
+                    .toggle {
+                        .arrow {
+                            transform: rotate(360deg);
+                        }
+                    }
+                    .options {
+                        display: none;
+                    }
+                }
+                .disabled {
+                    .toggle {
+                        cursor: not-allowed;
+                        h4 {
+                            opacity: 50%;
+                        }
+                        .arrow {
+                            transform: rotate(360deg);
+                            opacity: 60%;
+                        }
+                    }
+                    .options {
+                        display: none;
+                    }
+                }
             }
         }
+
         #order-summary {
+            margin: 100px 20px 20px 20px;
+            padding: 20px;
+            border-radius: 7px;
+            background-color: $darkgreyblue;
+            color: white;
+            text-align: left;
+
+            h4 {
+                margin: 0;
+                font-weight: bold;
+                color: $grey;
+                text-transform: uppercase;
+            }
             p {
-                font-size: 22px;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 30px;
+            }
+            #drink-span,
+            #type-span,
+            #amount-span,
+            #grind-span,
+            #delivery-span {
+                color: $darkcyan;
             }
         }
+
+        button {
+            background-color: $darkcyan;
+            border: none;
+            color: white;
+            padding: 12px 35px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            opacity: 75%;
+        }
+
         #order-summary-modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        
             #modal-content {
+                background-color: #fefefe;
+                margin: 15% auto; /* 15% from the top and centered */
+                //padding: 20px;
+                border: 1px solid #888;
+                width: 85%; /* Could be more or less, depending on screen size */
+                border-radius: 7px;
+                //text-align: center;
+
+                #drink-span2,
+                #type-span2,
+                #amount-span2,
+                #grind-span2,
+                #delivery-span2 {
+                    color: $darkcyan;
+                }
+                h4 {
+                    background-color: $darkgreyblue;
+                    color: white;
+                    margin: 0;
+                    border-top-left-radius: 7px;
+                    border-top-right-radius: 7px;
+                    padding: 20px;
+                    font-weight: 500;
+                    font-size: 20px;
+                    text-align: left;
+                }
                 p {
-                    padding-left: 40px;
-                    padding-right: 40px;
+                    padding: 20px 20px 0px 20px;
+                    font-size: 20px;
+                    line-height: 25px;
+                    color: $grey;
+                    text-align: left;
+                }
+                p:last-of-type {
+                    font-size: 14px;
+                    text-align: left;
+                    
                 }
                 button {
-                    display: none;
+                    width: auto;
+                    margin: 20px;
+                    
                 }
                 footer {
-                    display: flex;
-                    p {
-                        font-size: 20px !important;
-                        color: black;
-                    }
-                    button {
-                        display: block;
-                    }
-                }
-            }
-        }
-    }
-
-    @media only screen and (min-width: $breakpoint-desktop) {
-        .banner-margin {
-            #create-plan-banner {
-                background: url('../assets/plan/desktop/image-hero-blackcup.jpg') no-repeat;
-                background-size: cover;
-                width: 100%;
-                height: 500px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                //height: auto;
-                padding: 35px;
-                text-align: left;
-            
-                br {
                     display: none;
                 }
-                h1 {
-                    font-size: 40px;
+            }
+        }
+
+        @media only screen and (min-width: $breakpoint-tablet) {
+
+
+            .banner-margin {
+                #create-plan-banner {
+                    background: url('../assets/plan/tablet/image-hero-blackcup.jpg') no-repeat;
+                    background-size: cover;
+                    width: 100%;
+                    height: 400px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    //height: auto;
+                    padding: 35px;
+                    text-align: left;
+                
+                    br {
+                        display: none;
+                    }
+                    h1 {
+                        font-size: 40px;
+                    }
+                    p {
+                        font-size: 15px;
+                        width: 65%;
+                        line-height: 35px;
+                    }
                 }
+            }
+
+            #plan-description {
+                background: url('../assets/plan/tablet/bg-steps.png') no-repeat;
+                background-size: cover;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                text-align: left;
+                padding: 30px 20px 30px 20px 
+            }
+
+            #plan {
+                #selection-section {
+                    .selection-boxes {
+
+                        .options {
+                            display: flex;
+                            flex-direction: row;
+                            height: 150px;
+                            .item-box {
+                                height: 100%;
+                            }
+                        }
+                        
+                    }
+                }
+            
+            }
+            #order-summary {
                 p {
-                    font-size: 15px;
-                    width: 65%;
-                    line-height: 35px;
+                    font-size: 22px;
+                }
+            }
+            #order-summary-modal {
+                #modal-content {
+                    p {
+                        padding-left: 40px;
+                        padding-right: 40px;
+                    }
+                    button {
+                        display: none;
+                    }
+                    footer {
+                        display: flex;
+                        p {
+                            font-size: 20px !important;
+                            color: black;
+                        }
+                        button {
+                            display: block;
+                        }
+                    }
                 }
             }
         }
 
-        #plan-description {
-            background: url('../assets/plan/desktop/bg-steps.png') no-repeat;
-            background-size: cover;
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            text-align: left;
-            padding: 30px 20px 30px 20px 
-        }
+        @media only screen and (min-width: $breakpoint-desktop) {
+            .banner-margin {
+                #create-plan-banner {
+                    background: url('../assets/plan/desktop/image-hero-blackcup.jpg') no-repeat;
+                    background-size: cover;
+                    width: 100%;
+                    height: 500px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    //height: auto;
+                    padding: 35px;
+                    text-align: left;
+                
+                    br {
+                        display: none;
+                    }
+                    h1 {
+                        font-size: 40px;
+                    }
+                    p {
+                        font-size: 15px;
+                        width: 65%;
+                        line-height: 35px;
+                    }
+                }
+            }
 
-    }
+            #plan-description {
+                background: url('../assets/plan/desktop/bg-steps.png') no-repeat;
+                background-size: cover;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                text-align: left;
+                padding: 30px 20px 30px 20px 
+            }
+            #plan {
+                display: flex;
+                flex-direction: row;
+                #sidebar {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 90px 35px;
+                    width: 33%;
+                    text-align: left;
+                    font-size: 20px;
+                    a {
+                        text-decoration: none;
+                        padding: 10px;
+                        color: $grey;
+                    }
+                    a:not(:last-of-type) {
+                        border-bottom: solid 1px $grey;
+                        width: 75%;
+                    }
+                    a:hover {
+                        color: black;
+                    }
+                }
+                #selection-section {
+                    //flex-grow: 3;
+                }
+            }
+
+        }
+    }    
 }
 

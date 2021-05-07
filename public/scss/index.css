@@ -1,12 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  margin: 20px;
   text-align: center;
   font-family: 'Barlow', sans-serif;
 }
 
-body .btn {
+body main {
+  margin-top: 65px;
+}
+
+body main .btn {
   background-color: darkcyan;
   color: white;
   border: none;
@@ -17,12 +20,12 @@ body .btn {
   text-decoration: none;
 }
 
-body p {
+body main p {
   font-size: 16px;
   line-height: 26px;
 }
 
-body .banner {
+body main .banner {
   background-image: url("../assets/home/mobile/image-hero-coffeepress.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -35,14 +38,15 @@ body .banner {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   border-radius: 8px;
+  margin: 20px;
   padding: 75px 20px;
 }
 
-body .banner .banner-content {
+body main .banner .banner-content {
   color: white;
 }
 
-body .flex-section {
+body main .flex-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,7 +56,7 @@ body .flex-section {
           flex-direction: column;
 }
 
-body .flex-section .boxes {
+body main .flex-section .boxes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,41 +67,41 @@ body .flex-section .boxes {
   padding: 20px;
 }
 
-body .flex-section .boxes .img {
+body main .flex-section .boxes .img {
   height: auto;
   width: auto;
   padding: 15px;
 }
 
-body .flex-section .boxes h3 {
+body main .flex-section .boxes h3 {
   margin: 0;
   font-weight: 200;
 }
 
-body .flex-section .boxes p {
+body main .flex-section .boxes p {
   font-size: 12px;
 }
 
-body #collection-section .collection-header {
+body main #collection-section .collection-header {
   color: grey;
 }
 
-body #why-choose-section {
+body main #why-choose-section {
   color: white;
 }
 
-body #why-choose-section .section-header {
+body main #why-choose-section .section-header {
   background-color: #333D4B;
   padding: 15px 15px 475px 15px;
   border-radius: 10px;
 }
 
-body #why-choose-section .flex-section {
+body main #why-choose-section .flex-section {
   position: relative;
   top: -475px;
 }
 
-body #why-choose-section .flex-section .boxes {
+body main #why-choose-section .flex-section .boxes {
   background-color: darkcyan;
   margin: 15px 15px 0px 15px;
   padding-top: 25px;
@@ -105,25 +109,25 @@ body #why-choose-section .flex-section .boxes {
   border-radius: 10px;
 }
 
-body #why-choose-section .flex-section .boxes .img {
+body main #why-choose-section .flex-section .boxes .img {
   height: 45px;
   width: 45px;
   margin: auto;
   padding: 40px;
 }
 
-body #how-works-section {
+body main #how-works-section {
   position: relative;
   top: -475px;
 }
 
-body #how-works-section h3 {
+body main #how-works-section h3 {
   padding-top: 50px;
   font-weight: normal;
   color: grey;
 }
 
-body #how-works-section h1.number {
+body main #how-works-section h1.number {
   color: #fdd68a;
   font-size: 65px;
   margin: 0;
@@ -131,36 +135,36 @@ body #how-works-section h1.number {
   font-weight: normal;
 }
 
-body #how-works-section h2 {
+body main #how-works-section h2 {
   font-weight: normal;
 }
 
-body #how-works-section .btn {
+body main #how-works-section .btn {
   margin-top: 50px;
 }
 
 @media (min-width: 768px) {
-  body {
+  body body {
     text-align: left;
     margin: 50px;
   }
-  body .banner {
+  body body .banner {
     padding-left: 50px;
   }
-  body .banner .banner-content {
+  body body .banner .banner-content {
     width: 65%;
   }
-  body .banner .banner-content h1 {
+  body body .banner .banner-content h1 {
     margin: 0;
     width: 85%;
     font-size: 50px;
     font-weight: normal;
   }
-  body .banner .banner-content p {
+  body body .banner .banner-content p {
     margin: 0;
     padding: 10px 0px 50px 0px;
   }
-  body .banner .banner-content .btn {
+  body body .banner .banner-content .btn {
     width: 40%;
     padding: 15px 20px;
   }

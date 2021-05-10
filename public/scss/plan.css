@@ -267,6 +267,7 @@ body main #order-summary-modal #modal-content {
   border: 1px solid #888;
   width: 85%;
   /* Could be more or less, depending on screen size */
+  max-width: 425px;
   border-radius: 7px;
 }
 
@@ -313,6 +314,9 @@ body main #order-summary-modal #modal-content footer {
 }
 
 @media only screen and (min-width: 650px) {
+  body main .banner-margin {
+    margin: 35px;
+  }
   body main .banner-margin #create-plan-banner {
     background: url("../assets/plan/tablet/image-hero-blackcup.jpg") no-repeat;
     background-size: cover;

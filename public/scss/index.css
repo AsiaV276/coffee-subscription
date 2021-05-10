@@ -6,7 +6,7 @@ body {
 }
 
 body main {
-  margin-top: 65px;
+  margin-top: 75px;
 }
 
 body main .btn {
@@ -46,6 +46,10 @@ body main .banner .banner-content {
   color: white;
 }
 
+body main .banner .banner-content p {
+  padding-bottom: 20px;
+}
+
 body main .flex-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,11 +69,15 @@ body main .flex-section .boxes {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body main .flex-section .boxes .img {
+body main .flex-section .boxes .coffee-img {
   height: auto;
   width: auto;
+  max-width: 250px;
   padding: 15px;
 }
 
@@ -118,7 +126,7 @@ body main #why-choose-section .flex-section .boxes .img {
 
 body main #how-works-section {
   position: relative;
-  top: -475px;
+  top: -300px;
 }
 
 body main #how-works-section h3 {
@@ -127,7 +135,17 @@ body main #how-works-section h3 {
   color: grey;
 }
 
-body main #how-works-section h1.number {
+body main #how-works-section .flex-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main #how-works-section .flex-section h1.number {
   color: #fdd68a;
   font-size: 65px;
   margin: 0;
@@ -135,38 +153,94 @@ body main #how-works-section h1.number {
   font-weight: normal;
 }
 
-body main #how-works-section h2 {
+body main #how-works-section .flex-section h2 {
   font-weight: normal;
 }
 
-body main #how-works-section .btn {
+body main #how-works-section .flex-section .btn {
   margin-top: 50px;
 }
 
-@media (min-width: 768px) {
-  body body {
+@media only screen and (min-width: 650px) {
+  body {
     text-align: left;
-    margin: 50px;
   }
-  body body .banner {
+  body main {
+    margin: 75px 35px;
+  }
+  body main .banner {
     padding-left: 50px;
   }
-  body body .banner .banner-content {
+  body main .banner .banner-content {
     width: 65%;
   }
-  body body .banner .banner-content h1 {
+  body main .banner .banner-content h1 {
     margin: 0;
     width: 85%;
     font-size: 50px;
     font-weight: normal;
   }
-  body body .banner .banner-content p {
+  body main .banner .banner-content p {
     margin: 0;
     padding: 10px 0px 50px 0px;
   }
-  body body .banner .banner-content .btn {
+  body main .banner .banner-content .btn {
     width: 40%;
     padding: 15px 20px;
+  }
+  body main .flex-section .boxes {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body main .flex-section .boxes .text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .flex-section .boxes .text h3 {
+    font-size: 22px;
+  }
+  body main .flex-section .boxes .text p {
+    font-size: 16px;
+  }
+  body main #collection-section .collection-header {
+    position: relative;
+    z-index: -1;
+    font-size: 75px;
+    text-align: center;
+    top: 180px;
+    opacity: 25%;
+    margin-top: 0;
+  }
+  body main #why-choose-section .section-header {
+    padding: 50px 50px 300px 50px;
+  }
+  body main #why-choose-section .flex-section {
+    top: -300px;
+  }
+  body main #why-choose-section .flex-section .boxes {
+    margin: 15px 50px 0px 50px;
+  }
+  body main #why-choose-section .flex-section .boxes .text {
+    width: 70%;
+  }
+  body main #how-works-section .flex-section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body main #how-works-section .flex-section .boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=index.css.map */

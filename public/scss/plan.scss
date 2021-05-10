@@ -227,6 +227,7 @@ body {
                 //padding: 20px;
                 border: 1px solid #888;
                 width: 85%; /* Could be more or less, depending on screen size */
+                max-width: 425px;
                 border-radius: 7px;
                 //text-align: center;
 
@@ -272,9 +273,8 @@ body {
         }
 
         @media only screen and (min-width: $breakpoint-tablet) {
-
-
             .banner-margin {
+                margin: 35px;
                 #create-plan-banner {
                     background: url('../assets/plan/tablet/image-hero-blackcup.jpg') no-repeat;
                     background-size: cover;
@@ -422,9 +422,6 @@ body {
                     a:hover {
                         color: black;
                     }
-                }
-                #selection-section {
-                    //flex-grow: 3;
                 }
             }
             #order-summary {

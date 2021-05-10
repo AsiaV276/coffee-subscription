@@ -2,6 +2,7 @@ body header {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 1;
 }
 
 body header #header-container {
@@ -19,7 +20,6 @@ body header #header-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1;
   padding: 20px;
 }
 
@@ -66,7 +66,7 @@ body header #dropdown-menu-content a {
   color: black;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 650px) {
   body header {
     width: 100%;
     position: fixed;
